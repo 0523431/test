@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>상태 선택자</title>
+
+<style type="text/css">
+	input:enabled { background-color: lightblue; }
+	input:disabled { background-color: #ffcc99; }
+	input:focus { background-color: pink; }
+	
+	/*  < 메뉴바 만들때 사용하는 CSS>
+		li: list
+		- none : 앞에 순서 주석 넣지마
+		- float :
+		- padding:
+	
+		- li:nth-child(2n) : 2n == 짝수번째	// 2n+1 == 홀수번째
+							 3n // 3n+1 // 3n+2 ==== 이렇게 응용 가능
+		- border-radius: 10px 0 0 10px; : r값주는 방법, 왼쪽 위에서 시작해서 시계방향으로 읽으면 됨
+	*/
+	ul { overflow: hidden; }
+	li { list-style: none; float: left; padding: 15px; }
+	
+	li:nth-child(2n) { background-color: rgba(0,100,0,0.7);}
+	li:nth-child(2n+1) { background-color: #1B490D;  color: #ABCAA1;}
+	li:first-child { border-radius: 10px 0 0 10px; }
+	li:last-child { border-radius: 0 10px 10px 0; }
+</style>
+
+</head>
+<body>
+
+<ul>
+	<li>첫번째</li><li>두번째</li><li>세번째</li><li>네번째</li>
+	<li>다섯번째</li><li>여섯번째</li><li>일곱번째</li><li>여덟번째</li>
+</ul>
+
+<h2>사용가능</h2>
+<!--
+	<input type="text">
+	type="text"가 생략되면 자동	
+ -->
+<input value="입력하세요">
+<input type="text">
+<h2>사용불가능</h2>
+<input disabled="disabled" value="사용불가능 입력란">
+
+</body>
+</html>

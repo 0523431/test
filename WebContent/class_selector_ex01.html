@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Class selector 클래스 선택자</title>
+
+<style type="text/css">
+/*  웹표준에서
+		- id 속성은 페이지에서 유일함을 의미함 ==> #아이디명 { 설정 값; }
+		- class 속성은 분류를 의미함 =중복을 허용함 ==> .클래스 이름 { 설정 값; }
+*/
+	.select { color:#FA5882; }
+	.select2 { color:#4B8A08; }
+	
+	input[type="text"] { background:red; }
+	input[type="password"] { background:blue; }
+	#yellow { background:yellow; }
+</style>
+</head>
+
+<body>
+<ul>
+	<li class="select">사과</li><li class="select2">바나나</li>
+	<li class="select">무화과</li><li class="select2">멜론</li>
+</ul>
+
+<form>
+	<input type="text"> <!-- 배경:빨강 -->
+	<input type="password"> <!-- 배경:blue -->
+	<br>
+	<input type="text" id="yellow"> <!-- 배경:yellow -->
+	<input type="password"> <!-- 배경:blue -->
+	
+</form>
+
+</body>
+</html>

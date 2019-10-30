@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>반응 선택자</title>
+
+<style type="text/css">
+	/*
+		hover : mouse 커서가 영역 내부에 있는 경우
+		active : 마우스 버튼이 click된 상태
+		
+		link : 초기상태 (방문한 흔적이 없는 상태)
+		visited : 방문한적이 있는 링크
+		
+	*/
+	h1:hover { color:white; }
+	h1:active { color:olive; }
+
+	a:link { color:blue; }
+	a:visited { color:red; }
+	a:hover { color:yellow; }
+	a:active { color:pink; }
+
+	/* a태그의 클래스 속성이 default인 경우, 방문한 사이트는 green으로 변경 */
+	a.default:visited { color:green; }
+	/* a태그의 클래스 속성이 color인 경우, 마우스커서가 내부로 들어왔을 때 green으로 변경 */
+	a.color:hover { color:green; }
+	
+	h1.a1 { color:red; }
+	h1.b1 { background:black; }
+</style>
+
+</head>
+<body>
+
+<h1>반응 선택자 연습</h1>
+
+<table>
+	<tr>
+		<td>마우스를 올리면 ......<hr><b>기본값</b><br>
+		<a href="http://www.google.com" class="default">구글</a><br>
+		<hr> <!-- 수평선 -->
+		<a href="http://www.google.com" class="color">구글</a>
+		</td>
+</table>
+
+<!-- h1태그의 class 속성이 a1인 경우 글자색 빨강 // b1인경우 배경색 검정 -->
+<h1 class="a1 b1">하나의 태그 h1가 class 속성 a1 b1개를 갖음</h1>
+<h1 class="a1">class 속성 a1</h1>
+<h1 class="b1">class 속성 b1</h1>
+
+</body>
+</html>

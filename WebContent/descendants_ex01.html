@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>후손 선택자, 자손 선택자</title>
+
+<style type="text/css">
+	/*
+		h1 {} : 모든 h1태그를 의미
+		#header h1 {} : header의 하위 h1 태그	 ===== 후손
+		#header > h1 {} : header의 자식 중 h1 태그	 ===== 자손
+		#header, h1 {} : #header태그 또는 h1
+	*/
+	#header, h1 { color:red; }
+</style>
+
+</head>
+<body>
+
+<div id="header">
+	<h1 class="title">h1 class="title" 태그</h1>
+	<div id="nav">
+		<h1>div id="nav" 하위 h1 태그</h1>
+	</div>
+</div>
+
+<h1>body의 하위 h1 태그</h1>
+
+</body>
+</html>
